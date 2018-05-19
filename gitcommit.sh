@@ -1,3 +1,5 @@
+cd /home/martin/git/geek4geeks:wq
+
 git add .
 
 
