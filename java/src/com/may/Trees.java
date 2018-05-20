@@ -45,7 +45,9 @@ public class Trees<T extends Comparable<T>> {
 	public static void main(String[] args) {
 		Trees<Integer> tree = new Trees<>();
 		Integer[] nums = {10,5,15,2,7,12,17};
-		 tree.insert(nums );
+		 tree.insert(nums);
+		 tree.root = tree.mirror(tree.root);
+		 System.out.println(tree.root);
 	}
 	
 	public  Node<T>  mirror(Node<T> root) {
@@ -61,7 +63,7 @@ public class Trees<T extends Comparable<T>> {
 	
 	
 	
-	public void insert>(T[] num) {
+	public void insert(T[] num) {
 		for(T i:num) {
 	     if(root== null) {
 	    	 root = new Node<T>(i);
