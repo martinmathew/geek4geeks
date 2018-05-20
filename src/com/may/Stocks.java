@@ -1,7 +1,11 @@
 package com.may;
 
 
-
+/**
+ * 
+ * @author martin
+ *
+ */
 
 
 public class Stocks {

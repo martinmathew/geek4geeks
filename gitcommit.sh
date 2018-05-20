@@ -1,6 +1,6 @@
 
 cd /home/martin/git/geek4geeks
-
+git pull origin master
 git add .
 
 
