@@ -1,7 +1,8 @@
 package com.may;
 
-public class Trees<T> {
+public class Trees<T extends Comparable<T>> {
 	
+	private Node<T> root;
 	
 	 class  Node<T>{
 		
@@ -41,7 +42,11 @@ public class Trees<T> {
 	}
 	
 
-	
+	public static void main(String[] args) {
+		Trees<Integer> tree = new Trees<>();
+		Integer[] nums = {10,5,15,2,7,12,17};
+		 tree.insert(nums );
+	}
 	
 	public  Node<T>  mirror(Node<T> root) {
 		if(root!=null) {
@@ -56,7 +61,30 @@ public class Trees<T> {
 	
 	
 	
-	public 
+	public void insert>(T[] num) {
+		for(T i:num) {
+	     if(root== null) {
+	    	 root = new Node<T>(i);
+	     }else {
+	    	 Node<T> temp = root;
+	    	 Node<T> parent = null;
+	    	 while(temp!=null) {
+	    		 parent = temp;
+	    		 if(temp.value.compareTo(i)<0) {
+	    			 temp = temp.right;
+	    		 }else {
+	    			 temp = temp.left;
+	    		 }
+	    	 }
+	    	 Node<T> newNode = new Node<T>(i);
+	    	 if(parent.value.compareTo(i)<0) {
+	    		 parent.right = newNode;
+	    	 }else {
+	    		 parent.left = newNode;
+	    	 }
+	     }
+		}
+	}
 	
 	
 }
