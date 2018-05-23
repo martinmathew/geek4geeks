@@ -44,11 +44,30 @@ public class Trees<T extends Comparable<T>> {
 
 	public static void main(String[] args) {
 		Trees<Integer> tree = new Trees<>();
-		Integer[] nums = {10,5,15,2,7,12,17};
+		Integer[] nums = {10,5,2,1,3,15,12,13,17};
 		 tree.insert(nums);
-		 tree.root = tree.mirror(tree.root);
+		 tree.root = tree.removeHalfNode(tree.root);
 		 System.out.println(tree.root);
 	}
+	
+	
+	
+	public Node<T> removeHalfNode(Node<T> root) {
+		if(root!=null){
+			root.left = removeHalfNode(root.left);
+			root.right = removeHalfNode(root.right);
+			if(root.left == null ^ root.right == null) {
+				if(root)
+			}else {
+				return root;
+			}
+		}else {
+			return null;
+		}
+	}
+	
+	
+	
 	
 	public  Node<T>  mirror(Node<T> root) {
 		if(root!=null) {
