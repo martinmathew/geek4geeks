@@ -57,7 +57,12 @@ public class Trees<T extends Comparable<T>> {
 			root.left = removeHalfNode(root.left);
 			root.right = removeHalfNode(root.right);
 			if(root.left == null ^ root.right == null) {
-				if(root)
+				if(root.left!=null) {
+					return root.left;
+				}
+				else {
+					return root.right;
+				}
 			}else {
 				return root;
 			}
