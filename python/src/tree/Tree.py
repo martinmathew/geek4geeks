@@ -1,4 +1,5 @@
 class Tree:
+    root = None
     class Node:
 
         def __init__(self,val):
@@ -28,4 +29,7 @@ class Tree:
                     parent.left = new_node
 
 if __name__ == "__main__":
-    nums = [10,5,]
+    nums = [10,5,7,3,6,1,8]
+    tree = Tree()
+    tree.insert(nums)
+    print(tree.root)
