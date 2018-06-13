@@ -1,3 +1,6 @@
+
+
+
 class Tree:
     root = None
     class Node:
@@ -28,8 +31,30 @@ class Tree:
                 else:
                     parent.left = new_node
 
+
+def getMaxNode(node:Tree.Node,parent:Tree.Node) -> (Tree.Node,Tree.Node):
+    if node is not None and node.right is not None:
+        return getMaxNode(node.right,node)
+    else:
+        return (node,parent)
+
+
+def findKth(node:Tree.Node,parent:Tree.Node,k:int)->Tree.Node:
+    if node is not None:
+        max,maxPar = getMaxNode(node,parent)
+        if k==1:
+            return max
+        elif k==2:
+            return maxPar
+        else:
+            return findKth(maxPar.left,maxPar,k-2);
+
+
+
+
 if __name__ == "__main__":
-    nums = [10,5,7,3,6,1,8]
+    nums = [20,22,8,12,4,10,14]
     tree = Tree()
     tree.insert(nums)
-    print(tree.root)
+    node = findKth(tree.root,None,7)
+    print(node.val)
