@@ -12,5 +12,15 @@ def longest_prefix(strs):
         prefix = prefix + chr
     return prefix
 
+
+def lp_bs(strs,start,end):
+    if start < end:
+        str = strs[0][start:end]
+        for str in strs:
+            if !str.startswith(str):
+                
+
+
+
 if __name__ == "__main__":
     print(longest_prefix(["abcd", "abbd", "abdy", "az"]))
