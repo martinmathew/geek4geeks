@@ -29,7 +29,7 @@ class Tree:
                     parent.left = new_node
 
 if __name__ == "__main__":
-    nums = [10,5,7,3,6,1,8]
+    nums = [20,22,8,12,4,10,14]
     tree = Tree()
     tree.insert(nums)
     print(tree.root)

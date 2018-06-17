@@ -1,5 +1,5 @@
 
-cd D:\SourceCode\Securus\geek4geeks
+cd /home/martin/git/geek4geeks
 git pull origin master
 git add .
 
